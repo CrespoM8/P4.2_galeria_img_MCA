@@ -1,0 +1,24 @@
+{
+  "name": "p4.2_galeria_img_mca",
+  "version": "1.0.0",
+  "description": "El objetivo de esta práctica es crear una galería de imágenes responsiva y optimizada para dispositivos modernos. Los alumnos deberán realizar los siguientes pasos:",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrespoM8/P4.2_galeria_img_MCA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/CrespoM8/P4.2_galeria_img_MCA/issues"
+  },
+  "homepage": "https://github.com/CrespoM8/P4.2_galeria_img_MCA#readme",
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}

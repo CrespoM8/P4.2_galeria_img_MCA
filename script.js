@@ -16,7 +16,7 @@ const galleryData = [
 // Seleccionamos el contenedor de la galería
 const gallery = document.getElementById('gallery');
 if (!gallery) {
-  console.error('No se encontró el elemento con id="gallery" en el HTML.');
+  console.error('❌ Error: No se encontró el elemento con id="gallery". Revisa tu index.html.');
 }
 
 // Función para crear una tarjeta de imagen
@@ -27,7 +27,6 @@ function createImageCard(img) {
   // Crear <picture>
   const picture = document.createElement('picture');
 
-}
   // Fuentes para diferentes breakpoints y densidades
   const sourcesConfig = [
     { size: 'xlarge', media: '(min-width: 1200px)' },
@@ -38,17 +37,21 @@ function createImageCard(img) {
 
   sourcesConfig.forEach(cfg => {
     const source = document.createElement('source');
-    source.srcset = `output/resized/${img.base}-${cfg.size}-1x.jpg 1x, output/resized/${img.base}-${cfg.size}-2x.jpg 2x`;
-    source.type = 'image/jpeg';
+    source.srcset = `output-adv/${img.base}-${cfg.size}-1x.jpg 1x, output-adv/${img.base}-${cfg.size}-2x.jpg 2x`;
+    source.type = 'image/jpg';
     if (cfg.media) source.media = cfg.media;
     picture.appendChild(source);
   });
 
   // Imagen fallback
   const imgEl = document.createElement('img');
-  imgEl.src = `output/resized/${img.base}-small-1x.jpg`;
+  imgEl.src = `output-adv/${img.base}-small-1x.jpg`;
   imgEl.alt = img.caption;
   imgEl.loading = 'lazy'; // mejora rendimiento
+  imgEl.onerror = function() {
+    this.src = 'https://via.placeholder.com/400x300?text=Imagen+no+encontrada';
+    console.error(`❌ Imagen no encontrada: ${this.src}`);
+  };
   picture.appendChild(imgEl);
 
   // Pie de foto
@@ -62,10 +65,13 @@ function createImageCard(img) {
   figure.addEventListener('click', () => openModal(img));
 
   return figure;
+}
 
 // Crear todas las tarjetas
 galleryData.forEach(img => {
-  gallery.appendChild(createImageCard(img));
+  if (gallery) {
+    gallery.appendChild(createImageCard(img));
+  }
 });
 
 // === Modal ===
@@ -84,7 +90,7 @@ const closeModalBtn = modal.querySelector('.modal-close');
 
 function openModal(img) {
   // Usamos la versión de mayor resolución disponible
-  modalImg.src = `output/resized/${img.base}-xlarge-2x.jpg`;
+  modalImg.src = `output-adv/${img.base}-xlarge-2x.jpg`;
   modalImg.alt = img.caption;
   modalCaption.textContent = img.caption;
   modal.style.display = 'flex';
