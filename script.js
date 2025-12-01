@@ -1,5 +1,5 @@
 // script.js
-import emoji from 'emoji-js';
+
 // Datos de las imágenes
 const galleryData = [
   { base: "arbol-navidad", caption: "Árbol de Navidad adornado con luces y regalos 🎄🎁✨" },

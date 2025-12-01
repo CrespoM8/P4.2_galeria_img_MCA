@@ -7,8 +7,9 @@
 
 body {
   font-family: system-ui, sans-serif;
-  background: #f8f9fa;
-  color: #333;
+  background: #068021;
+  color: #b90404;
+  border: 2px solid #b90404;
   line-height: 1.6;
   padding: 20px;
 }
@@ -17,6 +18,12 @@ h1 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
+  color: white; /* O el color que prefieras para el texto */
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 10px #ff0000,
+    0 0 15px #ff0000,
+    0 0 20px #ff0000;
 }
 
 .gallery {
@@ -31,7 +38,7 @@ h1 {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(178, 84, 84, 0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
 }
