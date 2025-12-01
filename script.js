@@ -1,16 +1,16 @@
 // script.js
-
+import emoji from 'emoji-js';
 // Datos de las imágenes
 const galleryData = [
-  { base: "arbol-navidad", caption: "Árbol de Navidad adornado con luces y regalos" },
-  { base: "botellas", caption: "Colección de botellas de vidrio en un estante" },
-  { base: "candados", caption: "Candados colgando de una cadena" },
-  { base: "edificio", caption: "Edificio histórico de piedra con balcones" },
-  { base: "mario-kart", caption: "Consola Nintendo Switch con el juego Mario Kart en pantalla" },
-  { base: "perritos", caption: "Tres perritos durmiendo juntos sobre una manta blanca" },
-  { base: "plato", caption: "Plato con comida y utensilios sobre fondo rosa" },
-  { base: "rolex", caption: "Reloj Rolex de oro sobre su caja original" },
-  { base: "vaso", caption: "Vaso de whisky con hielo sobre fondo oscuro" }
+  { base: "arbol-navidad", caption: "Árbol de Navidad adornado con luces y regalos 🎄🎁✨" },
+  { base: "botellas", caption: "Colección de botellas de licores y alcoholes variados en un estante de un bar/taberna/restaurante 🥃🍷🍸" },
+  { base: "candados", caption: "Varios candado un tanto oxidados unidos entre ellos. El tiempo no da tregua ni para las personas ni para los objetos🔒🔒" },
+  { base: "edificio", caption: "Edificio antiguo precioso. B️ellísimo la verdad🏛️" },
+  { base: "mario-kart", caption: "Consola Nintendo Switch con el juego Mario Kart en pantalla 🎮🏎️👨🏻‍🔧" },
+  { base: "perritos", caption: "Varios perretes durmiendo juntos sobre una manta blanca aparentemente suave y cálida 🐶🐾" },
+  { base: "plato", caption: "Plato con hoja de planta de dudosa procedencia, un cigarrillo de contenido probablemente poco legal y un grinder, sobre fondo rosa 🧐😈🍁" },
+  { base: "rolex", caption: "Reloj decorativo en la fachada de una tienda de la marca Rolex 🕰️" },
+  { base: "vaso", caption: "Vaso de whisky con el logo de la conocida marca Jack Daniel's  con hielo sobre fondo oscuro🥃" }
 ];
 
 // Seleccionamos el contenedor de la galería
